@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Las Flores · El Poa · Centro Suba | SIG UPZ 28</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">LF</div>
+      <div>
+        <h1>Las Flores · El Poa · Centro Suba</h1>
+        <p>Sistema de Información Geográfica · UPZ 28 El Rincón · Bogotá D.C.</p>
+      </div>
+    </div>
+    <div class="topbar-badge">Datos abiertos · IDECA · OSM</div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <h2>Ventanas del sistema</h2>
+      <p class="sidebar-sub">15 consultas disponibles sobre el barrio</p>
+      <div id="windows" class="window-grid"></div>
+      <footer class="sidebar-foot">
+        Zona de estudio: polígono oficial de la UPZ 28 El Rincón (IDECA), que incluye Las Flores, El Poa y Centro Suba. La línea dorada marca el núcleo del barrio Las Flores.
+      </footer>
+    </aside>
+
+    <section class="content">
+      <div class="map-wrap">
+        <div id="map"></div>
+        <div class="map-overlay">
+          <strong>Las Flores · El Poa · Centro Suba</strong>
+          <span>Zona de estudio UPZ 28 · núcleo Las Flores en dorado</span>
+        </div>
+      </div>
+
+      <div class="detail" id="detail">
+        <div class="detail-head">
+          <div>
+            <h2 id="detail-title">Bienvenido</h2>
+            <p id="detail-sub">Selecciona una ventana para consultar información real del barrio.</p>
+          </div>
+          <button id="clear-markers" class="ghost-btn">Limpiar marcadores</button>
+        </div>
+        <div id="detail-body" class="detail-body welcome">
+          <div class="welcome-cards">
+            <div class="wcard"><span>📍</span><b>Ubicación</b><small>Localidad 11 · Suba · UPZ 28</small></div>
+            <div class="wcard"><span>🗺️</span><b>Polígono</b><small>Delimitación oficial IDECA</small></div>
+            <div class="wcard"><span>🏘️</span><b>Ventanas</b><small>15 consultas georreferenciadas</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
